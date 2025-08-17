@@ -4,11 +4,6 @@
 #include <thread>
 #include <string>
 #include <vector>
-#ifdef _WIN32
-#include <conio.h>
-#include <windows.h>
-#include <mmsystem.h>
-#endif
 #include "pacman.hpp"
 #include "ghost.hpp"
 #include "map.hpp"
@@ -48,6 +43,7 @@ public:
     void start();
     void stop();
     bool isRunning() const;
+
     
     // Getters for game state
     int getScore() const { return score; }

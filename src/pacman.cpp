@@ -1,7 +1,8 @@
-#include "headers/pacman.hpp"
-#include "headers/map.hpp"
-#include "headers/game.hpp"
-#include "headers/ultils.hpp"
+#include "pacman.hpp"
+#include "map.hpp"
+#include "game.hpp"
+#include "ultils.hpp"
+#include <iostream>
 
 Pacman::Pacman() : posY(15), posX(13), direction('<'), character('<'), alive(true) {
 }

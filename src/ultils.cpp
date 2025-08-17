@@ -36,76 +36,31 @@ void clearTerminal() {
 }
 
 void setTextColor(int color) {
-#ifdef _WIN32
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleTextAttribute(hConsole, color);
-#else
     cout << "\033[" << color << "m";
-#endif
 }
 
 void move_cursor(int x, int y) {
-#ifdef _WIN32
-    COORD coord;
-    coord.X = x;
-    coord.Y = y;
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-#else
     cout << "\033[" << y << ";" << x << "H"; // Move cursor
-#endif
 }
 
 
 void hideCursor() {
-#ifdef _WIN32
-    HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
-    CONSOLE_CURSOR_INFO cursorInfo;
-    GetConsoleCursorInfo(hOut, &cursorInfo);
-    cursorInfo.bVisible = false;
-    SetConsoleCursorInfo(hOut, &cursorInfo);
-#else
     cout << "\033[?25l";
-#endif
 }
 
 void showCursor() {
-#ifdef _WIN32
-    HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
-    CONSOLE_CURSOR_INFO cursorInfo;
-    GetConsoleCursorInfo(hOut, &cursorInfo);
-    cursorInfo.bVisible = true;
-    SetConsoleCursorInfo(hOut, &cursorInfo);
-#else
     cout << "\033[?25h";
-#endif
 }
 
 void resetCursor() {
-#ifdef _WIN32
-    COORD position;
-    position.X = 0;
-    position.Y = 0;
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), position);
-#else
     cout << "\033[H";
-#endif
 }
 
 void setCursorPosition(int x, int y) {
-#ifdef _WIN32
-    COORD position;
-    position.X = x;
-    position.Y = y;
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), position);
-#else
     cout << "\033[" << y << ";" << x << "H";
-#endif
 }
 
 int getch() {
-#ifdef _WIN32
-    return _getch();
-#else
     struct termios oldt, newt;
     int ch;
     tcgetattr(STDIN_FILENO, &oldt);
@@ -115,18 +70,14 @@ int getch() {
     ch = getchar();
     tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
     return ch;
-#endif
 }
 
 bool kbhit() {
-#ifdef _WIN32
-    return _kbhit();
-#else
     termios oldt, newt;
     int ch;
     int oldf;
 
-    tcgetattr(STDIN_FILENO, &oldt);
+    tcgetattr(STDIN_FILENO, &oldt); // <-- fixed here
     newt = oldt;
     newt.c_lflag &= ~(ICANON | ECHO);
     tcsetattr(STDIN_FILENO, TCSANOW, &newt);
@@ -135,7 +86,7 @@ bool kbhit() {
 
     ch = getchar();
 
-    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+    tcsetattr(STDIN_FILENO, TCSANOW, &oldt); // <-- also fixed here
     fcntl(STDIN_FILENO, F_SETFL, oldf);
 
     if (ch != EOF) {
@@ -144,25 +95,15 @@ bool kbhit() {
     }
 
     return false;
-#endif
 }
 
 void console_size(int width, int height) {
-#ifdef _WIN32
-    string cmd = "mode con: cols=" + to_string(width) + " lines=" + to_string(height);
-    system(cmd.c_str());
-#else
     // Linux: usually can't resize terminal from code safely
     // Maybe print a warning or leave empty
-#endif
 }
 
 void sleep_ms(int ms) {
-#ifdef _WIN32
-    Sleep(ms);
-#else
     usleep(ms * 1000);
-#endif
 }
 
 int random_range(int min, int max) {

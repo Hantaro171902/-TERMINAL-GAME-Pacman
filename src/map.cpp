@@ -1,4 +1,4 @@
-#include "headers/map.hpp"
+#include "map.hpp"
 #include <iostream>
 
 Map::Map() : maxDots(0), currentLevel(1) {

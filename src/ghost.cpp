@@ -1,6 +1,6 @@
-#include "headers/ghost.hpp"
-#include "headers/map.hpp"
-#include "headers/game.hpp"
+#include "ghost.hpp"
+#include "map.hpp"
+#include "game.hpp"
 #include <cstdlib>
 #include <ctime>
 

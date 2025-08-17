@@ -57,9 +57,10 @@ A console-based Pacman game implemented in C++ using Object-Oriented Programming
 ## Building the Game
 
 ### Prerequisites
-- Windows operating system (for Windows API dependencies)
-- C++ compiler with C++11 support (GCC, Clang, or MSVC)
-- Make utility
+- Linux/Unix operating system
+- C++ compiler with C++11 support (GCC, Clang)
+- Make utility or CMake
+- Terminal with ANSI color support
 
 ### Compilation
 
@@ -155,9 +156,10 @@ pacman-game/
 
 ## Dependencies
 
-- **Windows API**: For console manipulation and sound
+- **ANSI Escape Codes**: For console manipulation and colors
 - **C++11 Standard Library**: For threading, containers, and utilities
-- **WinMM Library**: For audio playback
+- **Linux/Unix System Calls**: For terminal input/output and sound
+- **aplay**: For audio playback (Linux)
 
 ## Future Enhancements
 
@@ -166,7 +168,8 @@ pacman-game/
 - Configurable difficulty settings
 - More ghost AI patterns
 - Enhanced visual effects
-- Cross-platform support
+- Sound effects for different terminals
+- Terminal size detection and adjustment
 
 ## Credits
 

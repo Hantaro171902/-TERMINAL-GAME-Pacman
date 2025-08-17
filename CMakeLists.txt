@@ -35,3 +35,9 @@ target_include_directories(Pacman PRIVATE src/headers)
 
 # Optional: copy asset folder into build dir
 file(COPY assets DESTINATION ${CMAKE_BINARY_DIR})
+
+# Set terminal size for better display
+add_custom_command(TARGET Pacman POST_BUILD
+    COMMAND echo "To run the game properly, resize your terminal to at least 70x32 characters"
+    COMMAND echo "You can do this with: stty size 32 70"
+)

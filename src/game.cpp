@@ -1,9 +1,9 @@
-#include "headers/game.hpp"
-#include "headers/map.hpp"
-#include "headers/pacman.hpp"
-#include "headers/ghost.hpp"
-#include "headers/ultils.hpp"
-#include "headers/color.hpp"
+#include "game.hpp"
+#include "map.hpp"
+#include "pacman.hpp"
+#include "ghost.hpp"
+#include "ultils.hpp"
+#include "color.hpp"
 #include <iostream>
 #include <thread>
 #include <chrono>

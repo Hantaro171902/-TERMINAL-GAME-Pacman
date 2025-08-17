@@ -2,8 +2,6 @@
 
 #include <iostream>
 #include <string>
-#include <windows.h>
-#include <mmsystem.h>
 #include "game_forward.hpp"
 
 enum class GhostType {
