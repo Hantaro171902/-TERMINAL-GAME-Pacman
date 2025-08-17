@@ -1,0 +1,3 @@
+/mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/build/CMakeFiles/Pacman.dir
+/mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/build/CMakeFiles/edit_cache.dir
+/mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/build/CMakeFiles/rebuild_cache.dir

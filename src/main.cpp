@@ -1,15 +1,17 @@
-#include "headers/game.hpp"
+#include "game.hpp"
 #include <iostream>
+
+using namespace std;
 
 int main() {
     try {
         Game game;
         game.start();
-    } catch (const std::exception& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
+    } catch (const exception& e) {
+        cerr << "Error: " << e.what() << endl;
         return 1;
     } catch (...) {
-        std::cerr << "Unknown error occurred" << std::endl;
+        cerr << "Unknown error occurred" << endl;
         return 1;
     }
     

@@ -1,26 +1,5 @@
 #pragma once
 
-#ifdef _WIN32
-// Windows color constants
-enum TextColor {
-    DEFAULT = 7,
-    RED = 4,
-    GREEN = 2,
-    YELLOW = 6,
-    BLUE = 1,
-    MAGENTA = 5,
-    GRAY = 8,
-    CYAN = 3,
-    WHITE = 7,
-    BRIGHT_RED = 12,
-    BRIGHT_GREEN = 10,
-    BRIGHT_YELLOW = 14,
-    BRIGHT_BLUE = 9,
-    BRIGHT_MAGENTA = 13,
-    BRIGHT_CYAN = 11,
-    BRIGHT_WHITE = 15
-};
-#else
 // ANSI color constants for Linux/Unix
 enum TextColor {
     DEFAULT = 0,
@@ -31,9 +10,15 @@ enum TextColor {
     MAGENTA = 35,
     GRAY = 30,
     CYAN = 36,
-    WHITE = 37
+    WHITE = 37,
+    BRIGHT_RED = 91,
+    BRIGHT_GREEN = 92,
+    BRIGHT_YELLOW = 93,
+    BRIGHT_BLUE = 94,
+    BRIGHT_MAGENTA = 95,
+    BRIGHT_CYAN = 96,
+    BRIGHT_WHITE = 97
 };
-#endif
 
 void setTextColor(TextColor color);
 void resetTextColor();

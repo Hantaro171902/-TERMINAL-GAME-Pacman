@@ -1,7 +1,7 @@
 #include "headers/pacman.hpp"
 #include "headers/map.hpp"
 #include "headers/game.hpp"
-#include <mmsystem.h>
+#include "headers/ultils.hpp"
 
 Pacman::Pacman() : posY(15), posX(13), direction('<'), character('<'), alive(true) {
 }
@@ -64,10 +64,10 @@ bool Pacman::canMove(char nextChar, Map& map, Game& game) {
         case 'O': // Super Pellet
             game.setSuperMode(true);
             game.setMessage("Super mode is now active!");
-            PlaySound(TEXT("pac_interm.wav"), NULL, SND_FILENAME | SND_ASYNC);
+            play_sound("assets/pac_interm.wav");
             return true;
         case '.': // Dot
-            PlaySound(TEXT("pac_munch.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_NOSTOP);
+            play_sound("assets/pac_munch.wav");
             game.incrementDotsEaten();
             game.incrementScore();
             return true;
@@ -84,13 +84,13 @@ void Pacman::handleCollision(char ghostChar, Map& map, Game& game) {
     if (!game.isSuperMode()) {
         // Pacman gets eaten
         game.setMessage("You were eaten by a ghost! You lost a life. :(");
-        PlaySound(TEXT("pac_death.wav"), NULL, SND_FILENAME | SND_ASYNC);
+        play_sound("assets/pac_death.wav");
         game.decrementLives();
         die();
     } else {
         // Pacman eats ghost
         game.setMessage("You ate a ghost! +100 SCORE!");
-        PlaySound(TEXT("pac_eatghost.wav"), NULL, SND_FILENAME | SND_ASYNC);
+        play_sound("assets/pac_eatghost.wav");
         game.setScore(game.getScore() + 100);
         // Ghost will be reset by the ghost class
     }

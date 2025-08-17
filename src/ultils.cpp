@@ -5,15 +5,9 @@
 #include <iomanip>
 #include <sstream>
 #include <iostream>
-
-#ifdef _WIN32
-#include <windows.h>
-#include <conio.h>
-#else
 #include <unistd.h>
 #include <termios.h>
 #include <fcntl.h>
-#endif
 
 using namespace std;
 
@@ -28,29 +22,17 @@ string formatTime(int totalSeconds) {
 }
 
 void play_sound(const string& path) {
-#ifdef _WIN32
-    PlaySound(path.c_str(), NULL, SND_FILENAME | SND_ASYNC);
-#else
     // Linux: use aplay or similar command
     string command = "aplay -q " + path + " &";
     system(command.c_str());
-#endif
 }
 
 void clearScreen() {
-#ifdef _WIN32
-    system("cls");
-#else
     cout << "\033[2J\033[1;1H"; // Clear screen + move cursor to top-left
-#endif
 }
 
 void clearTerminal() {
-#ifdef _WIN32
-    system("cls");
-#else
     cout << "\033c"; // Full reset
-#endif
 }
 
 void setTextColor(int color) {
