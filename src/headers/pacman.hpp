@@ -1,27 +1,45 @@
-#pragma once 
+#pragma once
 
-#include <vector>
+#include <iostream>
 #include <string>
+#include <conio.h>
+#include <windows.h>
+#include <mmsystem.h>
+#include "game_forward.hpp"
 
-struct GameData
-{
-    int pY, pX;
-    int score, lives, time, SMtime;
-    int dotsEaten, maxDots;
-    int eY1, eX1, eY2, eX2, eY3, eX3, eY4, eX4;
-    bool SM;
-    std::vector<std::string> level;
-    std::string message;
-};
-
-class Pacman
-{
+class Pacman {
 private:
-    GameData data;
+    int posY, posX;
+    char direction; // '<', '>', '^', 'v'
+    char character; // Current character representation
+    bool alive;
+    
+    bool canMove(char nextChar, Map& map, Game& game);
+    void handleCollision(char nextChar, Map& map, Game& game);
+    void resetPosition();
+    
 public:
     Pacman();
-    void startGame();
-    bool moveAllowed(char c, GameData& data);
-    void updateGame();
-    void thread(GameData& data);
+    Pacman(int y, int x);
+    
+    // Movement methods
+    void move(char input, Map& map, Game& game);
+    void update(Map& map, Game& game);
+    
+    // Getters
+    int getY() const { return posY; }
+    int getX() const { return posX; }
+    char getDirection() const { return direction; }
+    char getCharacter() const { return character; }
+    bool isAlive() const { return alive; }
+    
+    // Setters
+    void setPosition(int y, int x);
+    void setDirection(char dir);
+    void setAlive(bool a) { alive = a; }
+    
+    // Game logic
+    void reset();
+    void die();
+    void respawn();
 };
