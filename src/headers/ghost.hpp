@@ -4,7 +4,7 @@
 #include <string>
 #include "game_forward.hpp"
 
-enum class GhostType {
+    enum class GhostType {
     BLINKY,  // Red - M
     PINKY,   // Pink - W
     INKY,    // Cyan - Y
@@ -28,7 +28,7 @@ private:
     bool alive;
     
     // AI behavior
-    void changeDirection(int targetY, int targetX, Map& map, Game& game);
+    void changeDirection(int targetY, int targetX, int currentY, int currentX, Map& map, Game& game);
     bool canMove(char nextChar, Map& map);
     void moveTowardsTarget(int targetY, int targetX, Map& map, Game& game);
     void randomMove(Map& map, Game& game);

@@ -65,10 +65,10 @@ bool Pacman::canMove(char nextChar, Map& map, Game& game) {
         case 'O': // Super Pellet
             game.setSuperMode(true);
             game.setMessage("Super mode is now active!");
-            play_sound("assets/pac_interm.wav");
+            // play_sound("assets/pac_interm.wav");
             return true;
         case '.': // Dot
-            play_sound("assets/pac_munch.wav");
+            // play_sound("assets/pac_munch.wav");
             game.incrementDotsEaten();
             game.incrementScore();
             return true;
@@ -85,13 +85,13 @@ void Pacman::handleCollision(char ghostChar, Map& map, Game& game) {
     if (!game.isSuperMode()) {
         // Pacman gets eaten
         game.setMessage("You were eaten by a ghost! You lost a life. :(");
-        play_sound("assets/pac_death.wav");
+        // play_sound("assets/pac_death.wav");
         game.decrementLives();
         die();
     } else {
         // Pacman eats ghost
         game.setMessage("You ate a ghost! +100 SCORE!");
-        play_sound("assets/pac_eatghost.wav");
+        // play_sound("assets/pac_eatghost.wav");
         game.setScore(game.getScore() + 100);
         // Ghost will be reset by the ghost class
     }

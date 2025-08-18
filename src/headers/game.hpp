@@ -31,6 +31,7 @@ private:
     
     void initializeGame(int level);
     void runGameLoop();
+    void displayGame();
     void handleGameEnd();
     void resetGame();
     int showTitleScreen();

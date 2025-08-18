@@ -99,6 +99,15 @@ void Game::runGameLoop() {
             
             // Display game
             displayGame();
+
+            // If Pacman died but lives remain, respawn characters so play can continue
+            if (!pacman.isAlive() && lives > 0) {
+                superMode = false;
+                pacman.reset();
+                for (auto& ghost : ghosts) {
+                    ghost.reset();
+                }
+            }
             
             // Handle input
             if (kbhit()) {
@@ -131,7 +140,7 @@ void Game::runGameLoop() {
 void Game::displayGame() {
     // Display score and lives
     setTextColor(BRIGHT_RED);
-    cout << "    Score: " << score;
+    cout << "  Score: " << score;
     setTextColor(BRIGHT_YELLOW);
     cout << "  Lives: " << lives << " " << endl;
     
@@ -189,45 +198,24 @@ void Game::handleGameEnd() {
 }
 
 int Game::showTitleScreen() {
-    play_sound("assets/pac_intro.wav");
+    // play_sound("assets/pac_intro.wav");
     
-    
-    setTextColor(BLUE);
-    cout << "       ###############              \n";
-    cout << "      ##################        \n";
-    cout << "    #######################         \n";
-    cout << "  ##############   ###########                  \n";
-    cout << "##############################                  \n";
-    cout << "#######################                 \n";
-    cout << "####################            \n";
-    cout << "################            \n";
-    cout << "#############               \n";
-    cout << "###########                 \n";
-    cout << "#########                       \n";
-    cout << "############            ";
-    cout << "##################          \n";
-    cout << "#######################         \n";
-    cout << "###########################                 \n";
-    cout << "##############################                  \n";
-    cout << "    #######################                 \n";
-    cout << "      ####################              \n";
-    cout << "        ################            " << endl;
     
     setTextColor(BRIGHT_YELLOW);
-    cout << "     _____              _____     __  __                _   _ \n";
-    cout << "    |  __ \\    /\\      / ____|   |  \\/  |      /\\      | \\ | |\n";
-    cout << "    | |__) |  /  \\     | |       | \\  / |     /  \\     |  \\| |\n";
-    cout << "    |  ___/  / /\\ \\    | |       | |\\/| |    / /\\ \\    |     |\n";
-    cout << "    | |     / ____ \\   | |___    | |  | |   / ____ \\   | |\\  |  \n";
-    cout << "    |_|    /_/   \\__\\  \\____|    |_|  |_|  /_/    \\_\\  |_| \\_|" << std::endl;
-    cout << "\nPress s to start, q to quit." << endl;
+    cout << R"(
+     _____ _____ _____ _____ _____ _____ 
+    |  _  |  _  |     |     |  _  |   | |
+    |   __|     |   --| | | |     | | | |
+    |__|  |__|__|_____|_|_|_|__|__|_|___|
+    )";
     
     char input = getch();
     cout << " ";
     
     switch(input) {
         case 's':
-            cout << "New game starting...\nSelect level (1 or 2): ";
+            cout << "New game starting..." << endl;
+            cout << "Select level (1 or 2): ";
             int level;
             cin >> level;
             return level;
@@ -240,25 +228,30 @@ int Game::showTitleScreen() {
 
 void Game::showWinScreen() {
     setTextColor(BRIGHT_YELLOW);
-    cout << " __     ______  _    _  __          _______ _   _ _ \n";
-    cout << " \\ \\   / / __ \\| |  | | \\ \\        / /_   _| \\ | | |\n";
-    cout << "  \\ \\_/ / |  | | |  | |  \\ \\  /\\  / /  | | |  \\| | |\n";
-    cout << "   \\   /| |  | | |  | |   \\ \\/  \\/ /   | | | . ` | |\n";
-    cout << "    | | | |__| | |__| |    \\  /\\  /   _| |_| |\\  |_|\n";
-    cout << "    |_|  \\____/ \\____/      \\/  \\/   |_____|_| \\_(_)" << endl;
-    cout << "\nCongratulations! \nYOUR SCORE: " << score;
+    cout << R"(
+         __ __ _____ _____    _ _ _ _____ _____ 
+        |  |  |     |  |  |  | | | |     |   | |
+        |_   _|  |  |  |  |  | | | |  |  | | | |
+          |_| |_____|_____|  |_____|_____|_|___|
+    )";
+    cout << endl;
+    cout << "Congratulations! ";
+    cout << "YOUR SCORE: " << score;
     setTextColor(GREEN);
-    cout << "\n\nWould you like to play again?" << endl;
+    cout << "\nYou completed the game!" << endl;
+    cout << "Would you like to play again?" << endl;
 }
 
 void Game::showGameOverScreen() {
     setTextColor(BRIGHT_RED);
-    cout << "  _____              __  __   ______      ____  __      __  ______   ____  \n";
-    cout << " / ____|     /\\     |  \\/  | |   ___|    / __ \\ \\ \\    / / |  ____| |  __ \\ \n";
-    cout << " | |  __    /  \\    | \\  / | |  |__     | |  | | \\ \\  / /  | |__    | |__) |\n";
-    cout << " | | |_ |  / /\\ \\   | |\\/| | |  __|     | |  | |  \\ \\/ /   |  __|   |  _  / \n";
-    cout << " | |__| | / ____ \\  | |  | | |  |____   | |__| |   \\  /    | |____  | | \\ \\ \n";
-    cout << " \\_____/ /_/   \\_ \\ |_|  |_| |______|    \\____/     \\/     |______| |_|  \\_\\" << std::endl;
+    cout << R"(
+     _____ _____ _____ _____    _____ _____ _____ _____ 
+    |   __|  _  |     |   __|  |     |  |  |   __| __  |
+    |  |  |     | | | |   __|  |  |  |  |  |   __|    -|
+    |_____|__|__|_|_|_|_____|  |_____|\___/|_____|__|__|
+    
+    )";  
+    cout << endl;
     setTextColor(GREEN);
-    cout << "\nRetry?" << endl;
+    cout << "Retry?" << endl;
 }
