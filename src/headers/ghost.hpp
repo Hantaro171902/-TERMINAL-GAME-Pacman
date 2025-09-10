@@ -4,7 +4,7 @@
 #include <string>
 #include "game_forward.hpp"
 
-    enum class GhostType {
+enum class GhostType {
     BLINKY,  // Red - M
     PINKY,   // Pink - W
     INKY,    // Cyan - Y
