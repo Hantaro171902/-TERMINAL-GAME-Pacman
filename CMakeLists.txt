@@ -16,6 +16,7 @@ set(SOURCES
     src/game.cpp
     src/ghost.cpp
     src/map.cpp
+    src/cursor_input.cpp
 )
 
 set(HEADERS
@@ -26,6 +27,7 @@ set(HEADERS
     src/headers/ghost.hpp
     src/headers/map.hpp
     src/headers/game_forward.hpp
+    src/headers/cursor_input.hpp
 )
 
 # Exe

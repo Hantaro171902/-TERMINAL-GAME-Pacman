@@ -1,5 +1,8 @@
 #include "map.hpp"
+#include "ultils.hpp"
 #include <iostream>
+
+using namespace std;
 
 Map::Map() : maxDots(0), currentLevel(1) {
     loadLevel(1);
@@ -24,15 +27,15 @@ void Map::loadLevel1() {
         // "║...║.................║...║",
         // "║.O.║.══╦══.....══╦══.║.O.║",
         // "║.......║...╔.....║.......║",
-        // "╠══###.#║###║#####║#.####.║",
+        // "╠══###.#║###║═════║#.####.║",
         // "║......#.....#.....#......║",
-        // "╠══##.╔####.#.#####.#####╝",
+        // "╠══##.╔####.#.═════.═════╝",
         // "║    #.#           #.#     ",
-        // "║#####.#           #.######",
+        // "║═════.#           #.═════#",
         // "║.....#             #.....║",
-        // "######.#           #.#####╝",
+        // "═════#.#           #.═════╝",
         // "     #.#           #.#     ",
-        // "╔#####.#..#######..#.#####║",
+        // "╔═════.#..═════##..#.#####║",
         // "║............#............║",
         // "║.####.#####.#.#####.####.║",
         // "║O...#.......<.......#...O║",
@@ -163,11 +166,23 @@ void Map::handlePortal(int& y, int& x) const {
     }
 }
 
+string Map::renderCell(int y, int x) const {
+    char cell = getCell(y, x);
+    switch(cell) {
+        case '#': return BLOCK_FULL; // Wall - █ (full UTF-8 string)
+        case '.': return ".";      // Dot
+        case 'O': return "o";      // Super Pellet
+        case '[': return "[";      // Left Portal
+        case ']': return "]";      // Right Portal
+        default:  return " ";      // Empty space or unknown
+    }
+}
+
 void Map::display() const {
     for (int y = 0; y < MAP_HEIGHT; y++) {
         for (int x = 0; x < MAP_WIDTH; x++) {
-            std::cout << level[y][x];
+            cout << renderCell(y, x);
         }
-        std::cout << std::endl;
+        cout << endl;
     }
 }

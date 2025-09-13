@@ -3,6 +3,10 @@
 #include "game.hpp"
 #include <cstdlib>
 #include <ctime>
+#include <chrono>
+#include <iostream>
+
+using namespace std;
 
 Ghost::Ghost() : posY(9), posX(12), type(GhostType::BLINKY), character('M'), 
                  direction(Direction::UP), speed(250), alive(true) {

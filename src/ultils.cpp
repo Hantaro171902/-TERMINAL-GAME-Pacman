@@ -137,5 +137,5 @@ const char SYMBOL_DOUBLE_T_TOP[]        = "\u2566"; // ╦
 const char SYMBOL_DOUBLE_T_BOTTOM[]     = "\u2569"; // ╩
 const char SYMBOL_DOUBLE_INTERSECT[]    = "\u256C"; // ╬
 
-const char BLOCK_FULL[]   = "\u2588"; // █
-const char BLOCK_HALF[]   = "\u2592"; // ▒
+const char* BLOCK_FULL   = "\u2588"; // █
+const char* BLOCK_HALF   = "\u2592"; // ▒

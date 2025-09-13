@@ -153,6 +153,30 @@ src/color.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman.dir/build.make CMakeFiles/Pacman.dir/src/color.cpp.s
 .PHONY : src/color.cpp.s
 
+src/cursor_input.o: src/cursor_input.cpp.o
+.PHONY : src/cursor_input.o
+
+# target to build an object file
+src/cursor_input.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman.dir/build.make CMakeFiles/Pacman.dir/src/cursor_input.cpp.o
+.PHONY : src/cursor_input.cpp.o
+
+src/cursor_input.i: src/cursor_input.cpp.i
+.PHONY : src/cursor_input.i
+
+# target to preprocess a source file
+src/cursor_input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman.dir/build.make CMakeFiles/Pacman.dir/src/cursor_input.cpp.i
+.PHONY : src/cursor_input.cpp.i
+
+src/cursor_input.s: src/cursor_input.cpp.s
+.PHONY : src/cursor_input.s
+
+# target to generate assembly for a file
+src/cursor_input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pacman.dir/build.make CMakeFiles/Pacman.dir/src/cursor_input.cpp.s
+.PHONY : src/cursor_input.cpp.s
+
 src/game.o: src/game.cpp.o
 .PHONY : src/game.o
 
@@ -309,6 +333,9 @@ help:
 	@echo "... src/color.o"
 	@echo "... src/color.i"
 	@echo "... src/color.s"
+	@echo "... src/cursor_input.o"
+	@echo "... src/cursor_input.i"
+	@echo "... src/cursor_input.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"

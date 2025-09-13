@@ -51,5 +51,5 @@ extern const char SYMBOL_DOUBLE_T_TOP[];
 extern const char SYMBOL_DOUBLE_T_BOTTOM[];
 extern const char SYMBOL_DOUBLE_INTERSECT[];
 
-extern const char BLOCK_FULL[];
-extern const char BLOCK_HALF[];
+extern const char* BLOCK_FULL;
+extern const char* BLOCK_HALF;

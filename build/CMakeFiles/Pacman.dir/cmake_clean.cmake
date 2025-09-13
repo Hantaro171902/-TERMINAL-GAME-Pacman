@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Pacman.dir/src/color.cpp.o"
   "CMakeFiles/Pacman.dir/src/color.cpp.o.d"
+  "CMakeFiles/Pacman.dir/src/cursor_input.cpp.o"
+  "CMakeFiles/Pacman.dir/src/cursor_input.cpp.o.d"
   "CMakeFiles/Pacman.dir/src/game.cpp.o"
   "CMakeFiles/Pacman.dir/src/game.cpp.o.d"
   "CMakeFiles/Pacman.dir/src/ghost.cpp.o"

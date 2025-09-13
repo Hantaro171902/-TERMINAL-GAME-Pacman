@@ -24,6 +24,7 @@ Game::~Game() {
 }
 
 void Game::start() {
+    // clearTerminal();
     hideCursor();
     
     char input = 'r';
@@ -41,6 +42,7 @@ void Game::start() {
     }
     
     cout << "THANKS FOR PLAYING!" << endl;
+    showCursor();
 }
 
 void Game::stop() {
@@ -121,7 +123,7 @@ void Game::runGameLoop() {
     
     // Start ghost threads
     for (auto& ghost : ghosts) {
-        ghostThreads.push_back(std::thread([this, &ghost]() {
+        ghostThreads.push_back(thread([this, &ghost]() {
             while (gameRunning && lives > 0 && dotsEaten < maxDots) {
                 ghost.update(pacman.getY(), pacman.getX(), gameMap, *this);
                 this_thread::sleep_for(chrono::milliseconds(250));
@@ -169,7 +171,7 @@ void Game::displayGame() {
                     setTextColor(superMode ? WHITE : BRIGHT_CYAN);
                     break;
                 case '.':
-                    setTextColor(MAGENTA);
+                    setTextColor(YELLOW);
                     break;
                 case 'O':
                     setTextColor(BRIGHT_WHITE);

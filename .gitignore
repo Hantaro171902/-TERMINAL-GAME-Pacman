@@ -10,7 +10,7 @@ cmake_install.cmake
 Makefile
 
 # --- Executables ---
-Tetris
+PacmanGame
 *.exe
 *.out
 *.app

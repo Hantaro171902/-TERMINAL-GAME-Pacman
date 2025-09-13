@@ -27,7 +27,8 @@ public:
     char getCell(int y, int x) const;
     void setCell(int y, int x, char c);
     bool isValidPosition(int y, int x) const;
-    
+    std::string renderCell(int y, int x) const;
+
     // Game logic
     bool isWall(int y, int x) const;
     bool isDot(int y, int x) const;

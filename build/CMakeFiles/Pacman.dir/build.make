@@ -167,6 +167,20 @@ CMakeFiles/Pacman.dir/src/map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pacman.dir/src/map.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/src/map.cpp -o CMakeFiles/Pacman.dir/src/map.cpp.s
 
+CMakeFiles/Pacman.dir/src/cursor_input.cpp.o: CMakeFiles/Pacman.dir/flags.make
+CMakeFiles/Pacman.dir/src/cursor_input.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/src/cursor_input.cpp
+CMakeFiles/Pacman.dir/src/cursor_input.cpp.o: CMakeFiles/Pacman.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Pacman.dir/src/cursor_input.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pacman.dir/src/cursor_input.cpp.o -MF CMakeFiles/Pacman.dir/src/cursor_input.cpp.o.d -o CMakeFiles/Pacman.dir/src/cursor_input.cpp.o -c /mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/src/cursor_input.cpp
+
+CMakeFiles/Pacman.dir/src/cursor_input.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Pacman.dir/src/cursor_input.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/src/cursor_input.cpp > CMakeFiles/Pacman.dir/src/cursor_input.cpp.i
+
+CMakeFiles/Pacman.dir/src/cursor_input.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pacman.dir/src/cursor_input.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/src/cursor_input.cpp -o CMakeFiles/Pacman.dir/src/cursor_input.cpp.s
+
 # Object files for target Pacman
 Pacman_OBJECTS = \
 "CMakeFiles/Pacman.dir/src/main.cpp.o" \
@@ -175,7 +189,8 @@ Pacman_OBJECTS = \
 "CMakeFiles/Pacman.dir/src/pacman.cpp.o" \
 "CMakeFiles/Pacman.dir/src/game.cpp.o" \
 "CMakeFiles/Pacman.dir/src/ghost.cpp.o" \
-"CMakeFiles/Pacman.dir/src/map.cpp.o"
+"CMakeFiles/Pacman.dir/src/map.cpp.o" \
+"CMakeFiles/Pacman.dir/src/cursor_input.cpp.o"
 
 # External object files for target Pacman
 Pacman_EXTERNAL_OBJECTS =
@@ -187,9 +202,10 @@ Pacman: CMakeFiles/Pacman.dir/src/pacman.cpp.o
 Pacman: CMakeFiles/Pacman.dir/src/game.cpp.o
 Pacman: CMakeFiles/Pacman.dir/src/ghost.cpp.o
 Pacman: CMakeFiles/Pacman.dir/src/map.cpp.o
+Pacman: CMakeFiles/Pacman.dir/src/cursor_input.cpp.o
 Pacman: CMakeFiles/Pacman.dir/build.make
 Pacman: CMakeFiles/Pacman.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Pacman"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Pacman"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Pacman.dir/link.txt --verbose=$(VERBOSE)
 	echo To\ run\ the\ game\ properly,\ resize\ your\ terminal\ to\ at\ least\ 70x32\ characters
 	echo You\ can\ do\ this\ with:\ stty\ size\ 32\ 70
