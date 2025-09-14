@@ -247,10 +247,13 @@ CMakeFiles/Pacman.dir/src/game.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019/C
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
+  /usr/include/c++/13/atomic \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/atomic_base.h \
+  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
   /usr/include/c++/13/bits/basic_ios.h \
   /usr/include/c++/13/bits/basic_ios.tcc \
   /usr/include/c++/13/bits/basic_string.h \
@@ -291,6 +294,7 @@ CMakeFiles/Pacman.dir/src/game.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019/C
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_mutex.h \
   /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
@@ -307,6 +311,7 @@ CMakeFiles/Pacman.dir/src/game.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019/C
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
   /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_lock.h \
   /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
@@ -337,6 +342,7 @@ CMakeFiles/Pacman.dir/src/game.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019/C
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
   /usr/include/c++/13/limits \
+  /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/pstl_config.h \
@@ -461,10 +467,13 @@ CMakeFiles/Pacman.dir/src/ghost.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019/
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
+  /usr/include/c++/13/atomic \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/atomic_base.h \
+  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
   /usr/include/c++/13/bits/basic_ios.h \
   /usr/include/c++/13/bits/basic_ios.tcc \
   /usr/include/c++/13/bits/basic_string.h \
@@ -505,6 +514,7 @@ CMakeFiles/Pacman.dir/src/ghost.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019/
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_mutex.h \
   /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
@@ -521,6 +531,7 @@ CMakeFiles/Pacman.dir/src/ghost.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019/
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
   /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_lock.h \
   /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
@@ -551,6 +562,7 @@ CMakeFiles/Pacman.dir/src/ghost.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019/
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
   /usr/include/c++/13/limits \
+  /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/pstl_config.h \
@@ -676,10 +688,13 @@ CMakeFiles/Pacman.dir/src/main.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019/C
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
+  /usr/include/c++/13/atomic \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/atomic_base.h \
+  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
   /usr/include/c++/13/bits/basic_ios.h \
   /usr/include/c++/13/bits/basic_ios.tcc \
   /usr/include/c++/13/bits/basic_string.h \
@@ -720,6 +735,7 @@ CMakeFiles/Pacman.dir/src/main.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019/C
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_mutex.h \
   /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
@@ -736,6 +752,7 @@ CMakeFiles/Pacman.dir/src/main.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019/C
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
   /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_lock.h \
   /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
@@ -766,6 +783,7 @@ CMakeFiles/Pacman.dir/src/main.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019/C
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
   /usr/include/c++/13/limits \
+  /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/pstl_config.h \
@@ -1133,10 +1151,13 @@ CMakeFiles/Pacman.dir/src/pacman.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
+  /usr/include/c++/13/atomic \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/atomic_base.h \
+  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
   /usr/include/c++/13/bits/basic_ios.h \
   /usr/include/c++/13/bits/basic_ios.tcc \
   /usr/include/c++/13/bits/basic_string.h \
@@ -1177,6 +1198,7 @@ CMakeFiles/Pacman.dir/src/pacman.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_mutex.h \
   /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
@@ -1193,6 +1215,7 @@ CMakeFiles/Pacman.dir/src/pacman.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
   /usr/include/c++/13/bits/this_thread_sleep.h \
+  /usr/include/c++/13/bits/unique_lock.h \
   /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
@@ -1222,6 +1245,7 @@ CMakeFiles/Pacman.dir/src/pacman.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
   /usr/include/c++/13/limits \
+  /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/pstl_config.h \
@@ -1604,6 +1628,8 @@ CMakeFiles/Pacman.dir/src/ultils.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
 
 /usr/include/x86_64-linux-gnu/bits/sigthread.h:
 
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
+
 /usr/include/c++/13/bits/cpp_type_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
@@ -1626,13 +1652,15 @@ CMakeFiles/Pacman.dir/src/ultils.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
 
 /usr/include/c++/13/bits/uses_allocator_args.h:
 
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+/usr/include/c++/13/bits/atomic_base.h:
 
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/c++/13/bits/atomic_lockfree_defines.h:
 
 /usr/include/stdlib.h:
 
@@ -1786,6 +1814,12 @@ CMakeFiles/Pacman.dir/src/ultils.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
 
 /usr/include/c++/13/cstdio:
 
+/usr/include/x86_64-linux-gnu/bits/signum-arch.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/c++/13/bits/stl_pair.h:
+
 /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
 
 /mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/src/headers/color.hpp:
@@ -1793,6 +1827,8 @@ CMakeFiles/Pacman.dir/src/ultils.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/c++/13/bits/std_mutex.h:
 
 /usr/include/c++/13/bits/basic_string.tcc:
 
@@ -1815,6 +1851,10 @@ CMakeFiles/Pacman.dir/src/ultils.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
 /usr/include/asm-generic/errno-base.h:
 
 /usr/include/c++/13/bits/stl_iterator_base_funcs.h:
+
+/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
+
+/usr/include/c++/13/iosfwd:
 
 /usr/include/c++/13/bits/predefined_ops.h:
 
@@ -1879,6 +1919,10 @@ CMakeFiles/Pacman.dir/src/ultils.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/c++/13/bits/requires_hosted.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigstack.h:
+
+/mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/src/headers/map.hpp:
 
 /usr/include/c++/13/bits/invoke.h:
 
@@ -1988,10 +2032,6 @@ CMakeFiles/Pacman.dir/src/ultils.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
-/usr/include/c++/13/iosfwd:
-
-/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
-
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
@@ -2014,9 +2054,9 @@ CMakeFiles/Pacman.dir/src/ultils.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h:
 
-/usr/include/c++/13/bits/char_traits.h:
-
 /usr/include/x86_64-linux-gnu/bits/signal_ext.h:
+
+/usr/include/c++/13/bits/char_traits.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
 
@@ -2040,6 +2080,10 @@ CMakeFiles/Pacman.dir/src/ultils.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
+
 /mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/src/cursor_input.cpp:
 
 /usr/include/linux/close_range.h:
@@ -2055,10 +2099,6 @@ CMakeFiles/Pacman.dir/src/ultils.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
 /usr/include/x86_64-linux-gnu/bits/sigstksz.h:
 
 /usr/include/x86_64-linux-gnu/bits/stat.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
 
 /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h:
 
@@ -2082,6 +2122,8 @@ CMakeFiles/Pacman.dir/src/ultils.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
 
 /mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/src/headers/ultils.hpp:
 
+/usr/include/c++/13/atomic:
+
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/c++/13/bits/chrono.h:
@@ -2097,6 +2139,10 @@ CMakeFiles/Pacman.dir/src/ultils.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
 /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
 
 /usr/include/c++/13/bits/stl_vector.h:
+
+/usr/include/c++/13/bits/unique_lock.h:
+
+/usr/include/c++/13/mutex:
 
 /usr/include/c++/13/bits/vector.tcc:
 
@@ -2119,13 +2165,3 @@ CMakeFiles/Pacman.dir/src/ultils.cpp.o: /mnt/d/DATA/Documents/Visual-Studio-2019
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
 
 /mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/src/ghost.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-
-/usr/include/c++/13/bits/stl_pair.h:
-
-/usr/include/x86_64-linux-gnu/bits/signum-arch.h:
-
-/mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/src/headers/map.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/sigstack.h:

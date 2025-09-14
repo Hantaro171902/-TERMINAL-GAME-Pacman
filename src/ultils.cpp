@@ -137,5 +137,32 @@ const char SYMBOL_DOUBLE_T_TOP[]        = "\u2566"; // ╦
 const char SYMBOL_DOUBLE_T_BOTTOM[]     = "\u2569"; // ╩
 const char SYMBOL_DOUBLE_INTERSECT[]    = "\u256C"; // ╬
 
-const char* BLOCK_FULL   = "\u2588"; // █
-const char* BLOCK_HALF   = "\u2592"; // ▒
+// Block characters
+const char BLOCK_FULL[]   = "\u2588"; // █
+const char BLOCK_HALF[]   = "\u2592"; // ▒
+const char BLOCK_RECT[]   = "\u2585"; // ▅
+const char BLOCK_UP[]     = "\u2580"; // ▀
+const char BLOCK_DOWN[]   = "\u2584"; // ▄
+const char BLOCK_LEFT[]   = "\u258C"; // ▌
+const char BLOCK_RIGHT[]  = "\u2590"; // ▐
+
+// Arrow characters
+const char* ARROW_UP    = "\u2191"; // ↑
+const char* ARROW_DOWN  = "\u2193"; // ↓
+const char* ARROW_LEFT  = "\u2190"; // ←
+const char* ARROW_RIGHT = "\u2192"; // →
+
+// Heart characters
+const char* HEART_SOLID  = "\u2665"; // ♥
+const char* HEART_EMPTY  = "\u2661"; // ♡
+
+// Triangle characters
+const char* TRIANGLE_UP    = "\u25B2"; // ▲
+const char* TRIANGLE_DOWN  = "\u25BC"; // ▼
+const char* TRIANGLE_LEFT  = "\u25C0"; // ◀
+const char* TRIANGLE_RIGHT = "\u25B6"; // ▶
+
+// Ball characters
+const char* BALL_SOLID    = "\u25CF"; // ●
+const char* BALL_HOLLOW   = "\u25CB"; // ○
+const char* BALL_BULLSEYE = "\u25CE"; // ◎

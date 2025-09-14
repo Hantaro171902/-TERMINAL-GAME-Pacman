@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/mnt/d/DATA/Documents/Visual-Studio-2019/C++/ascii-game/pacman-game/src/headers
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS = -std=gnu++17 -g -O0 -fsanitize=address,undefined -fno-omit-frame-pointer
 

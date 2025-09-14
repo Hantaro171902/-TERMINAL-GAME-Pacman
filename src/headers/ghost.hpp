@@ -36,6 +36,8 @@ private:
 public:
     Ghost();
     Ghost(GhostType t, int y, int x, int spd);
+
+    char getChar() const;
     
     // Movement and AI
     void update(int pacmanY, int pacmanX, Map& map, Game& game);

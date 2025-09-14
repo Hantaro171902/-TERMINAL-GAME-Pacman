@@ -9,6 +9,8 @@
 #include "map.hpp"
 #include "ultils.hpp"
 #include "color.hpp"
+#include <atomic>
+#include <mutex>
 
 class Game {
 private:
@@ -25,7 +27,8 @@ private:
     bool superMode;
     std::string message;
     
-    bool gameRunning;
+    std::atomic<bool> gameRunning;
+    std::mutex gameMutex; 
     std::thread pacmanThread;
     std::vector<std::thread> ghostThreads;
     

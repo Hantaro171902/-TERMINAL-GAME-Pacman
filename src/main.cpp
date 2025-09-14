@@ -1,5 +1,6 @@
 #include "game.hpp"
 #include "cursor_input.hpp"
+#include <clocale>
 #include <cstdlib>
 #include <ctime>
 #include <string>
@@ -36,6 +37,8 @@ void showInfo(const string& arg, const string& programName) {
 }
 
 int main(int argc, char* argv[]) {
+    setlocale(LC_ALL, "");
+
     if (argc > 1) {
         showInfo(argv[1], argv[0]);
         return 0;

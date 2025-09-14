@@ -10,6 +10,10 @@ Pacman::Pacman() : posY(15), posX(13), direction('<'), character('<'), alive(tru
 Pacman::Pacman(int y, int x) : posY(y), posX(x), direction('<'), character('<'), alive(true) {
 }
 
+char Pacman::getChar() const {
+    return character;
+}
+
 void Pacman::move(char input, Map& map, Game& game) {
     char newDirection = direction;
     

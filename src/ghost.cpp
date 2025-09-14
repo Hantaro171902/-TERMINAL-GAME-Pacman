@@ -34,6 +34,10 @@ Ghost::Ghost(GhostType t, int y, int x, int spd) : posY(y), posX(x), type(t),
     }
 }
 
+char Ghost::getChar() const {
+    return character;
+}
+
 void Ghost::update(int pacmanY, int pacmanX, Map& map, Game& game) {
     if (!alive) return;
     

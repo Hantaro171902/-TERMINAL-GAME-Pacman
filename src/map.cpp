@@ -22,7 +22,7 @@ void Map::loadLevel(int level) {
 }
 
 void Map::loadLevel1() {
-    char map1[21][28] = {
+    char map1[MAP_HEIGHT][MAP_WIDTH] = {
         // "╔═══╦═════════════════╦═══╗",
         // "║...║.................║...║",
         // "║.O.║.══╦══.....══╦══.║.O.║",
@@ -77,7 +77,7 @@ void Map::loadLevel1() {
 }
 
 void Map::loadLevel2() {
-    char map2[21][28] = {
+    char map2[MAP_HEIGHT][MAP_WIDTH] = {
         "###########################",
         "#O..........###..........O#",
         "#....#################....#",
@@ -114,10 +114,8 @@ void Map::reset() {
 }
 
 char Map::getCell(int y, int x) const {
-    if (isValidPosition(y, x)) {
-        return level[y][x];
-    }
-    return '#';
+    if (y < 0 || y >= getHeight() || x < 0 || x >= getWidth()) return '#';
+    return level[y][x];
 }
 
 void Map::setCell(int y, int x, char c) {

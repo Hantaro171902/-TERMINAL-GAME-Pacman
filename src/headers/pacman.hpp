@@ -18,6 +18,8 @@ private:
 public:
     Pacman();
     Pacman(int y, int x);
+
+    char getChar() const;
     
     // Movement methods
     void move(char input, Map& map, Game& game);
