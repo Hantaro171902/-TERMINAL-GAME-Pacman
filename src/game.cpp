@@ -206,7 +206,7 @@ void Game::displayGame() {
 
             // choose color based on character
             switch(cellChar) {
-                case '#': case ']': case '[':
+                case '#':
                     setTextColor(BLUE);
                     break;
                 case '<': case '^': case '>': case 'v': // pacman glyphs
@@ -230,13 +230,16 @@ void Game::displayGame() {
                 case 'O':
                     setTextColor(BRIGHT_WHITE);
                     break;
+                case '[': case ']':
+                    setTextColor(CYAN);
+                    break;
                 default:
                     setTextColor(WHITE);
                     break;
             }
 
             // print glyph; walls use BLOCK_FULL (multi-byte), others print the char
-            if (cellChar == '#' || cellChar == '[' || cellChar == ']') {
+            if (cellChar == '#') {
                 cout << BLOCK_FULL;
             } else {
                 // print single-char items (pacman, ghosts, dots, fruit)
