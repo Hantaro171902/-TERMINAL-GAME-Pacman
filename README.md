@@ -4,7 +4,8 @@ A console-based Pacman clone written in C++ with Object-Oriented Programming pri
 
 ---
 
-<img width="818" height="723" alt="image" src="https://github.com/user-attachments/assets/a52e4c23-7a63-485c-bd46-cd16855d7ea0" />
+<img width="1019" height="782" alt="image" src="https://github.com/user-attachments/assets/07cbbe73-2030-4882-aacd-382d70a42469" />
+
 
 --- 
 
